@@ -1,7 +1,7 @@
 const {expect} = require('chai');
 const { ethers } = require('hardhat');
 const hre = require('hardhat');
-const {loadFixtures} = require('@nomicfoundation/hardhat-network-helpers');
+const {loadFixture} = require('@nomicfoundation/hardhat-network-helpers');
 
 describe("Spacebear", () => {
 
@@ -15,13 +15,13 @@ describe("Spacebear", () => {
     }
 
     it("is possible to mint a token", async () => {
-        const {spacebearInstance} = loadFixtures(deploySpacebearAndMintTokenFixture);
+        const {spacebearInstance} = await loadFixture(deploySpacebearAndMintTokenFixture);
         const [owner, otherAccount] = await ethers.getSigners();
         expect(await spacebearInstance.ownerOf(0)).to.equal(otherAccount.address)
     })
 
     it("fails to transfer the token from the wrong address", async () => {
-        const {spacebearInstance} = loadFixtures(deploySpacebearAndMintTokenFixture);
+        const {spacebearInstance} = await loadFixture(deploySpacebearAndMintTokenFixture);
         const [owner, otherAccount, notTheNFTOwner] = await ethers.getSigners();
         // await spacebearInstance.safeMint(otherAccount.address);
         expect(await spacebearInstance.ownerOf(0)).to.equal(otherAccount.address)
