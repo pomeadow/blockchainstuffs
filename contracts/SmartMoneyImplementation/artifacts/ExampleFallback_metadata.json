@@ -1,0 +1,45 @@
+{
+	"compiler": {
+		"version": "0.8.17+commit.8df45f5f"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/SmartMoneyImplementation/SmartMoneyImplementation.sol": "ExampleFallback"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/SmartMoneyImplementation/SmartMoneyImplementation.sol": {
+			"keccak256": "0x6b99114d7082be1ca6fe761e7c935774e9c03fcd80339e3aae68bb3f4ba0b3be",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://f956614f661fae3f61cc4e237883869c2188765b53d8dc7d52dc00ab4d192b3d",
+				"dweb:/ipfs/QmW82niSiMMcSGFW2R8x9A5NWW87KvjMkExViZjAsDnxBF"
+			]
+		}
+	},
+	"version": 1
+}
